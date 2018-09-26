@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(34, 45, 50);
+}
+
+.panel.panel-default {
+  border-color: #337ab7;
+}
+.panel-default>.panel-heading {
+  background-color: rgb(51, 122, 183);
+  color: white;
+  text-align: center;
+}
+.panel-title {
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+}
+.container>.col-lg-4.col-lg-offset-4 {
+  margin-top: 150px;
+}
