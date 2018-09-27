@@ -74,7 +74,6 @@ a:focus {
   margin-right: 5px;
 }
 .lt_aside .nav li .child_nav {
-  display: none;
   transition: all 1s;
 }
 .lt_aside .nav li .child_nav a {
