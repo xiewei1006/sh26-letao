@@ -20,9 +20,9 @@ a:focus {
   text-align: center;
   vertical-align: middle;
 }
-
-
-
+.red {
+  color: #A94442;
+}
 
 /*左侧菜单栏*/
 .lt_aside {
@@ -33,7 +33,13 @@ a:focus {
   top: 0;
   left: 0;
   z-index: 999;
+  transition: all 1s;
 }
+
+.lt_aside.hiddn_menu {
+  left: -180px;
+}
+
 /*标题*/
 .lt_aside .title {
   height: 50px;
@@ -80,9 +86,6 @@ a:focus {
 .lt_aside .nav li a i {
   margin-right: 5px;
 }
-.lt_aside .nav li .child_nav {
-  transition: all 1s;
-}
 .lt_aside .nav li .child_nav a {
   padding-left: 60px;
 }
@@ -93,7 +96,13 @@ a:focus {
   height: 100%;
   padding-left: 180px;
   padding-top: 50px;
+  transition: all 1s;
 }
+
+.lt_main.hiddn_menu {
+  padding-left: 0;
+}
+
 /*头部导航*/
 .lt_main .main_nav {
   position: fixed;
@@ -104,7 +113,13 @@ a:focus {
   left: 0;
   padding-left: 180px;
   background-color: rgb(60,141,188);
+  transition: all 1s;
 }
+
+.lt_main .main_nav.hiddn_menu {
+  padding-left: 0;
+}
+
 .lt_main .main_nav a {
   color: white;
   font-size: 16px;

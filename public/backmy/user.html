@@ -6,7 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/user.css">
+  <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+  <link rel="stylesheet" href="css/common.css">
+
 </head>
 <body>
 <!--左侧固定，右侧自适应-->
@@ -29,7 +31,7 @@
         <a href="javascript:;" class="current"><i class="glyphicon glyphicon-user"></i>用户管理</a>
       </li>
       <li>
-        <a href="javascript:;"><i class="glyphicon glyphicon-list"></i>分类管理</a>
+        <a class="category" href="javascript:;"><i class="glyphicon glyphicon-list"></i>分类管理</a>
         <div class="child_nav" style="display: none">
           <a href="javascript:;">一级分类</a>
           <a href="javascript:;">二级分类</a>
@@ -39,7 +41,6 @@
     </ul>
   </div>
 </div>
-
 
 <!--右侧内容-->
 <div class="lt_main">
@@ -86,6 +87,25 @@
   </div>
 </div>
 
+<!--退出模态框-->
+<div class="modal fade" id="myModal" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+      </div>
+      <div class="modal-body red">
+        <i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗？
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="loginOut">退出</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <script type="text/template" id="tmp">
   {{ each list v i }}
@@ -107,9 +127,13 @@
 
 
 <script src="lib/jquery/jquery.min.js"></script>
+<script src="js/checkLogin.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/nprogress/nprogress.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 
+
+<script src="js/common.js"></script>
 <script src="js/user.js"></script>
 </body>
 </html>
