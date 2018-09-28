@@ -114,6 +114,7 @@ a:focus {
   padding-left: 180px;
   background-color: rgb(60,141,188);
   transition: all 1s;
+  z-index: 666;
 }
 
 .lt_main .main_nav.hiddn_menu {
@@ -143,6 +144,10 @@ a:focus {
   padding: 9px;
   color: #ccc;
 }
+.lt_main .container-fluid .lt_add {
+  margin-bottom: 20px;
+}
+
 
 
 

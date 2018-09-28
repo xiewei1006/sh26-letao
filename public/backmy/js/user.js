@@ -51,7 +51,7 @@ $(function () {
           //当前页
           currentPage: currentPage,
           //总页数
-          totalPages: info.total/info.size,
+          totalPages: Math.ceil(info.total/info.size),
           //设置控件的大小，mini, small, normal,large
           size: "normal",
           //为按钮绑定点击事件 page:当前点击的按钮值
