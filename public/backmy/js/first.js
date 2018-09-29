@@ -73,20 +73,23 @@ $(function () {
   });
 
   //添加
-  $('#addSure').click(function(){
+  $("#add_form").on('success.form.bv', function (e){
+    e.preventDefault();
+    //使用ajax提交逻辑
     $.ajax({
       url:'/category/addTopCategory',
       type:'post',
       data:$('#add_form').serialize(),
       dataType:'json',
       success:function(info){
-        //console.log(info);
+        console.log(info);
         if(info.success) {
           render(currentPage, pageSize);
+          $('#addModal').modal('hide');
+          $("#add_form").data('bootstrapValidator').resetForm(true);
         }
       }
     })
-
   })
 
   //重置表单
