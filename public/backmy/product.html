@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/common.css">
 
@@ -133,38 +134,47 @@
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
+                <!--挖坑-->
               </ul>
             </div>
-
-            <input name="categoryName" type="text" class="form-control" placeholder="请选择二级分类">
-            <input name="categoryName" type="text" class="form-control" value="1">
+            <!--选择归属品牌(隐藏域)-->
+            <input name="brandId" type="hidden" placeholder="请选择二级分类">
+            <!--是否上架，默认上架(隐藏域)-->
+            <input name="statu" type="hidden" value="1">
           </div>
           <div class="form-group">
-            <input name="categoryName" type="text" class="form-control" placeholder="请输入商品名称">
+            <!--产品名称-->
+            <input name="proName" type="text" class="form-control" placeholder="请输入商品名称">
           </div>
           <div class="form-group">
-            <textarea name="categoryName" class="form-control" rows="3" placeholder="请输入商品描述"></textarea>
+            <!--产品描述-->
+            <textarea name="proDesc" class="form-control" rows="3" placeholder="请输入商品描述"></textarea>
           </div>
           <div class="form-group">
-            <input name="categoryName" type="text" class="form-control" placeholder="请输入商品库存">
+            <!--产品库存-->
+            <input name="num" type="text" class="form-control" placeholder="请输入商品库存">
           </div>
           <div class="form-group">
-            <input name="categoryName" type="text" class="form-control" placeholder="请输入商品尺码">
+            <!--产品尺寸-->
+            <input name="size" type="text" class="form-control" placeholder="请输入商品尺码">
           </div>
           <div class="form-group">
-            <input name="categoryName" type="text" class="form-control" placeholder="请输入商品原价">
+            <!--老价格-->
+            <input name="oldPrice" type="text" class="form-control" placeholder="请输入商品原价">
           </div>
           <div class="form-group">
-            <input name="categoryName" type="text" class="form-control" placeholder="请输入商品现价">
+            <!--价格-->
+            <input name="price" type="text" class="form-control" placeholder="请输入商品现价">
           </div>
           <div class="form-group">
-            <label for="file" class="btn btn-default">上传图片</label>
-            <input name="file" type="file" class="form-control" id="file">
+            <label for="pic1" class="btn btn-default">上传图片</label>
+            <!--隐藏-->
+            <input name="pic1" type="file" id="pic1" multiple data-url="/product/addProductPic" style="display: none">
           </div>
-          <div class="form-group">
-            <img width="100" src="">
-            <input name="categoryName" type="text" class="form-control" placeholder="接收图片返回地址">
+          <div class="form-group" id="img-box" style="font-size: 0">
+            <!--<img width="100" src="">-->
+            <!--<input name="" type="text" placeholder="接收图片返回名称">-->
+            <!--<input name="" type="text" placeholder="接收图片返回地址">-->
           </div>
         </div>
 
@@ -198,13 +208,23 @@
   {{ /each }}
 </script>
 
+<script type="text/html" id="dropdownMenu">
+  {{ each rows v i }}
+  <li><a data-id="{{ v.id }}" href="#">{{ v.brandName }}</a></li>
+  {{ /each }}
+</script>
+
 
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="js/checkLogin.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="lib/jquery-fileupload/jquery.iframe-transport.js"></script>
+<script src="lib/jquery-fileupload/jquery.fileupload.js"></script>
 <script src="js/common.js"></script>
 <script src="js/product.js"></script>
 </body>
