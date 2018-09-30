@@ -29,13 +29,13 @@
   <div class="nav">
     <ul>
       <li>
-        <a href="javascript:;"><i class="glyphicon glyphicon-user"></i>用户管理</a>
+        <a href="user.html"><i class="glyphicon glyphicon-user"></i>用户管理</a>
       </li>
       <li>
         <a class="category" href="javascript:;"><i class="glyphicon glyphicon-list"></i>分类管理</a>
         <div class="child_nav" style="display: none">
-          <a href="javascript:;">一级分类</a>
-          <a href="javascript:;">二级分类</a>
+          <a href="first.html">一级分类</a>
+          <a href="second.html">二级分类</a>
         </div>
       </li>
       <li><a class="current" href="javascript:;"><i class="glyphicon glyphicon-tags"></i>商品管理</a></li>
@@ -58,7 +58,7 @@
   <div class="container-fluid">
     <!--路径-->
     <ol class="clearfix">
-      <li><a href="javascript:;">管理系统</a></li>
+      <li><a href="index.html">管理系统</a></li>
       <li class="active">商品管理</li>
     </ol>
     <!--内容-->
@@ -171,10 +171,9 @@
             <!--隐藏-->
             <input name="pic1" type="file" id="pic1" multiple data-url="/product/addProductPic" style="display: none">
           </div>
-          <div class="form-group" id="img-box" style="font-size: 0">
-            <!--<img width="100" src="">-->
-            <!--<input name="" type="text" placeholder="接收图片返回名称">-->
-            <!--<input name="" type="text" placeholder="接收图片返回地址">-->
+          <div class="form-group" id="img-box">
+            <input name="picStatus" type="hidden">
+            <!--<img width="100" height="100" src="">-->
           </div>
         </div>
 

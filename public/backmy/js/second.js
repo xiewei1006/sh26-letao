@@ -6,7 +6,7 @@ $(function(){
   var pageSize = 5;
   render(currentPage, pageSize);
 
-  //加载列表和分页
+  //1.加载列表和分页
   function render(page, size) {
     $.ajax({
       url: '/category/querySecondCategoryPaging',
@@ -44,7 +44,7 @@ $(function(){
   }
 
 
-  //添加二级分类
+  //2.添加二级分类
   //打开模态框
   $('#add').click(function () {
     //打开
@@ -67,7 +67,7 @@ $(function(){
 
   })
 
-  //图片预览及地址隐藏域
+  //3.图片预览及地址隐藏域
   $('#pic1').on('change',function(){
     var formData = new FormData(document.querySelector('#add_form'));
     $.ajax({
@@ -87,7 +87,7 @@ $(function(){
     })
   })
 
-  //一级分类隐藏域
+  //4.一级分类隐藏域
   $('#add_form .dropdown-menu').on('click','a',function(){
     $('#dropdownTxt').text($(this).text());
     $('#add_form [name="categoryId"]').val($(this).data('id'));
@@ -95,7 +95,7 @@ $(function(){
     $('#add_form').data('bootstrapValidator').updateStatus('categoryId','VALID');
   })
 
-  //分类校验
+  //5.分类校验
   $('#add_form').bootstrapValidator({
     //1. 指定不校验的类型
     excluded:[],
@@ -141,7 +141,7 @@ $(function(){
 
   })
 
-  //验证成功添加
+  //6.验证成功添加
   $("#add_form").on('success.form.bv',function(e){
     e.preventDefault();
     //使用ajax提交逻辑
