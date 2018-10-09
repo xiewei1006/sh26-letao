@@ -1,9 +1,4 @@
 /*主体部分*/
-.lt_main {
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
 .lt_main .lt_nav {
   padding: 10px;
 }
@@ -13,29 +8,4 @@
 }
 .lt_main .lt_nav li a {
   display: block;
-}
-
-
-/* 产品区域 */
-.lt_product {
-  padding: 10px;
-}
-.lt_product li {
-  float: left;
-  width: 48%;
-  text-align: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-.lt_product li:nth-child(2n+1) {
-  margin-right: 4%;
-}
-.lt_product li a {
-  display: block
-}
-.lt_product li a .price {
-  color: red;
-}
-.lt_product li a .oldPrice {
-  text-decoration: line-through;
 }

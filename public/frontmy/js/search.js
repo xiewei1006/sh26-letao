@@ -58,9 +58,9 @@ $(function(){
 
   // 四、添加历史记录
   $('.search-btn').on('click',function(){
-    var value = $('.search-text').val().trim();
+    var key = $('.search-text').val().trim();
     // 非空验证
-    if( value.length == 0 ) {
+    if( key.length == 0 ) {
       mui.toast('请输入搜索关键字');
       return;
     }
@@ -69,21 +69,22 @@ $(function(){
     // 将关键字添加到数组最前面
     // 需求:
     // 1. 如果已经有重复项, 删除重复项
-    if( arr.indexOf(value) != -1 ) {
-      arr.splice(arr.indexOf(value),1);
+    if( arr.indexOf(key) != -1 ) {
+      arr.splice(arr.indexOf(key),1);
     }
     // 2. 如果长度超过 10, 删除最后一项(最旧的)
     if( arr.length >= 10 ){
       arr.pop();
     }
     //将关键字添加到数组最前面
-    arr.unshift(value);
+    arr.unshift(key);
     localStorage.setItem("search_list", JSON.stringify(arr));
 
     render();
 
     //清空搜索框
     $('.search-text').val('');
+    location.href = 'searchList.html';
   })
 
 

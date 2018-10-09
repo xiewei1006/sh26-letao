@@ -1,23 +1,4 @@
 
-/* 搜索上部分 */
-.search {
-  padding: 10px;
-  position: relative;
-}
-.search .search-text {
-  height: 34px;
-  font-size: 12px;
-  border: 1px solid #007AFF;
-  margin: 0;
-  border-radius: 5px;
-  padding-right: 54px;
-}
-.search .search-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border-radius: 0 5px 5px 0;
-}
 
 /* 搜索下部分 */
 .search-histroy {
