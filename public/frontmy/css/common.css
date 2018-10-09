@@ -19,11 +19,11 @@ img {
   height: 100%;
   max-width: 640px;
   min-width: 320px;
-  background-color: pink;
   margin: 0 auto;
   position: relative;
   padding-top: 45px;
   padding-bottom: 55px;
+  background-color: white;
 }
 
 /*头部区域*/
@@ -61,25 +61,6 @@ img {
   color: white;
   font-weight: normal;
 }
-
-
-/*主体部分*/
-.lt_main {
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-.lt_main .lt_nav {
-  padding: 10px;
-}
-.lt_main .lt_nav li {
-  float: left;
-  width: 33.3%;
-}
-.lt_main .lt_nav li a {
-  display: block;
-}
-
 
 
 
