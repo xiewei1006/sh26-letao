@@ -84,7 +84,7 @@ $(function(){
 
     //清空搜索框
     $('.search-text').val('');
-    location.href = 'searchList.html';
+    location.href = 'searchList.html?key='+key;
   })
 
 
