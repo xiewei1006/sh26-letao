@@ -13,7 +13,21 @@ $(function(){
       }
     })
   }
-  render();
+  
+  //判断是否登陆
+  $.ajax({
+    url:'/user/queryUserMessage',
+    type:'get',
+    dataType:'json',
+    success:function(info){
+      if(info.error){
+        location.href = 'login.html';
+      }
+      else {
+        render();
+      }
+    }
+  })
 
   //删除
 
